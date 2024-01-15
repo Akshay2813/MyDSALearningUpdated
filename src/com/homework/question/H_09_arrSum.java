@@ -1,9 +1,6 @@
 package com.homework.question;
 
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
-import java.util.Stack;
 
 public class H_09_arrSum {
 	
@@ -61,33 +58,16 @@ public class H_09_arrSum {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-//		int[] a = {1,0,0};
-//		int[] b = {9,0,0};
-//		twoArrSum(a,b);
+		int[] a = {1,0,0};
+		int[] b = {9,0,0};
+	String sum =twoArrSum(a,b);
 //
-//		String s= "1234";
-		
-		Stack st = new Stack();
-		st.push("2");
-		st.push("6");
-		st.push("2");
-		st.push("2");
-		st.push("0");
-		
-		System.out.println(st.peek());
-		
-		while(st.peek().equals(0))
-		{
-			st.pop();
-		}
+		String s= "1234";
 		
 		
-		
-		
-		
-
-		
-		
+	
+	
+//		Collections.reverse(s);
 		
 	}
 

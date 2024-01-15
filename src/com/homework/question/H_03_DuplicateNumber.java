@@ -9,6 +9,8 @@ public class H_03_DuplicateNumber {
 	//where each integer is in the range [1, n] inclusive.
 	//There is only one repeated number in nums, return this repeated number.
 	//You must solve the problem without modifying the array nums and uses only constant extra space
+	
+	//using visited method
 	public static int findDuplicate(int[] nums) {
 
         for(int i=0; i<nums.length;i++)

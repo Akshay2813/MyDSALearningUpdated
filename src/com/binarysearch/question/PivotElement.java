@@ -31,7 +31,8 @@ public class PivotElement {
 			}
 			if(arr[start]>arr[mid])
 			{
-				//assume we are in Line B then we can say with guarantee all element on line B always less than arr[start]
+				//assume we are in Line B
+				//then we can say with guarantee all element on line B always less than arr[start]
 				//and here mid exist on line B and hence we have move toward line A
 				end=mid-1;
 				

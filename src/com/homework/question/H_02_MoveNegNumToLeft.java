@@ -33,12 +33,37 @@ public class H_02_MoveNegNumToLeft {
 	}
 
        
+	public static void MoveNegativeToLefUsingTwoPointer(int[] arr)
+	{
+		int low=0;
+		int high=arr.length-1;
+		while(low<high)
+		{
+			if(arr[low]<0)
+			{
+				low++;
+			}
+			else if(arr[high]>=0)
+			{
+				high--;
+			}
+			else
+			{
+				int temp=arr[low];
+				arr[low]=arr[high];
+				arr[high]=temp;
+			}
+			
+		}
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] arr = {1,2,-3,-4,5,6,0};
-		MoveNegativeToLeft(arr);
-		
+//		MoveNegativeToLeft(arr);
+		MoveNegativeToLefUsingTwoPointer(arr);
 		System.out.print(Arrays.toString(arr));
+		
+		
 		
 		
 

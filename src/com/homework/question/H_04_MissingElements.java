@@ -10,18 +10,14 @@ public class H_04_MissingElements {
        for(int i=0;i<nums.length;i++)
        {
     	   int index=Math.abs(nums[i]);
-//    	   System.out.print(index +"  ");
           
 
     	   if(nums[index-1]>0)
     	   {
-//    		   System.out.print(index-1 +"  ");
     		   nums[index-1]=nums[index-1]*-1;
-//    	       System.out.println(Arrays.toString(nums));
 
     	   }
        }       
-//       System.out.println(Arrays.toString(nums));
        
        for(int i=0; i<nums.length;i++)
        {
