@@ -2,7 +2,7 @@ package com.homework.question;
 
 import java.util.Arrays;
 
-public class H_18_mergeSort {
+public class H_18_InsertionSort {
 
 	public static void mergeSort(int[] arr)
 	{
