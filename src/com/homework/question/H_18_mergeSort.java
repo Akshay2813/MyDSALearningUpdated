@@ -21,12 +21,30 @@ public class H_18_mergeSort {
 		
 		}
 	}
+	
+	public static void mergeSort_Bari(int[] arr)
+	{
+		for(int i=1;i<arr.length;i++)  //i >> round and i start from 1 as oth element (Omly one) 
+			//assuemd as sorted
+		{
+			int value=arr[i];
+			int j=i-1;
+			while(j>-1 && arr[j]> value)  //if arr[j]> value then shift to next
+			{
+				arr[j+1]=arr[j];
+				j--;
+			}
+			
+			arr[j+1]=value;
+		}
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] arr = { 5, 4, 3, 2, 1 };
 		System.out.println(Arrays.toString(arr));
 
-		mergeSort(arr);
+//		mergeSort(arr);
+		mergeSort_Bari(arr);
 		System.out.println(Arrays.toString(arr));
 	}
 

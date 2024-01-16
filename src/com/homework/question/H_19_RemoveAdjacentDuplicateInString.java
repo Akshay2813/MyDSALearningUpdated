@@ -1,38 +1,34 @@
 package com.homework.question;
 
+import java.util.Stack;
+
 public class H_19_RemoveAdjacentDuplicateInString {
 
 	public static void removeAllAdjacentDuplicatesInString(String s)
 	{
-		StringBuilder answerstring=new StringBuilder("");
-	        int i=0;
-	        while(i<s.length())
-	        {
-	        	System.out.println("Entered while");
-	            if(answerstring.length()>0)
-	            {
-		        	System.out.println("length > 0");
-
-	                if(answerstring.charAt(answerstring.length()-1)==s.charAt(i))
-	                {
-	                    answerstring.deleteCharAt(i);
-	                }
-	                else
-	                {
-	                	
-	                    answerstring.append(s.charAt(i));
-	                }
-
-	            }
-	            else
-	            {
-		        	System.out.println("length ==0");
-
-	                answerstring.append(s.charAt(i));
-	            }
-	            i++;
-	        }
-		System.out.print(answerstring);
+		Stack<Character> st = new Stack();
+		
+		for(int i=0; i<s.length();i++)
+		{
+			if(st.empty()==false && st.peek()==s.charAt(i))
+			{
+				st.pop();
+			}
+			else
+			{
+				st.push(s.charAt(i));
+			}
+		}
+		
+	
+//		System.out.println(st);
+		String ans="";
+		while(st.empty()==false)
+		{
+			ans=st.peek()+ans;
+			st.pop();
+		}
+		System.out.print(ans);
 	}
 	public static void main(String[] args) {
 		
