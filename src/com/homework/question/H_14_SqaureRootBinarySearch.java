@@ -2,6 +2,21 @@ package com.homework.question;
 
 public class H_14_SqaureRootBinarySearch {
 
+	
+	public static int squareRoot_usingForLoope(int n)
+	{
+		int ans=0;
+		
+		for(int i=0; i<=n; i++)
+		{
+			if(i*i==n)
+			{
+				return i;
+			}
+			
+		}
+		return ans;
+	}
 	public static int squareRoot(int n)
 	{
 		int start=0;
