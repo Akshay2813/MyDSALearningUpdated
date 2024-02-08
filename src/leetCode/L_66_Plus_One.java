@@ -41,19 +41,19 @@ public class L_66_Plus_One {
 	public static int[] plusOne_Optimized(int[] digits)
     {
 
-       for (int i = digits.length - 1; i >= 0; i--)
+       for (int i = digits.length - 1; i >= 0; i--) //TC -1 8 9 8   //TC-2 8 2 9 // TC-3 9 9 9
         {
-            if (digits[i] < 9) 
+            if (digits[i] < 9)  //TC-1 _ _ 8     // _ 2 0
             {
-                digits[i]++;
-                return digits;
+                digits[i]++; // TC-1 _ _ 9      // _ 3 0
+                return digits; //TC-1 8 9 9     //8 3 0
             }
-	    digits[i] = 0;
+	    digits[i] = 0; //_ _ 0  // 9 9 0 // 9 0 0 // 0 0 0
         }
 
         digits = new int[digits.length + 1];
-        digits[0] = 1;
-        return digits;
+        digits[0] = 1; // 1 0 0 0
+        return digits; // 1 0 0 0
     }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

@@ -321,11 +321,11 @@ public class L_67_AddBinary {
 	    int i = a.length() - 1;
 	    int j = b.length() - 1;
 
-	    while (i >= 0 || j >= 0 || carry == 1) 
+	    while (i >= 0 || j >= 0 || carry == 1) // 0 1  //0 1 
 	    {
 	      if(i >= 0)
 	      {
-	    	  carry += a.charAt(i) - '0';
+	    	  carry += a.charAt(i) - '0';  //
 		      i--;
 	      }
 	      if(j >= 0)
@@ -348,8 +348,7 @@ public class L_67_AddBinary {
 		
 		
 		String ans = addBinary_try_2(a,b);
-		
-		
+	
 		System.out.println(ans);
 	}
 
