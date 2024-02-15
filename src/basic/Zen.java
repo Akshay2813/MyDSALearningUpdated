@@ -39,7 +39,8 @@ public class Zen {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub	
-		int[] arr = {0,0,1,2,0,-1,-1,5,5,5};
+//		int[] arr = {0,0,1,2,0,-1,-1,5,5,5};
+		int[] arr = {4,0, 3, 2, 5};
 		m1(arr);
 		System.out.println();
 		m2(arr);

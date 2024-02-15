@@ -4,16 +4,14 @@ import java.util.Arrays;
 
 public class H_17_BubbleSort {
 	
-	
-	
-	public static void bubbleSort(int[] arr)
+	public static void bubbleSort(int[] arr)   // {9,10,5}
 	{
-		for(int round=1;round<arr.length;round++)
+		for(int round=1;round<arr.length;round++)  // 1 2
 		{
-		
-			for(int j=0;j<arr.length-round;j++)
+			boolean swapped=false;
+			for(int j=0;j<arr.length-round;j++) //round=1 j=0,1  round=2 j=0
 			{
-				boolean swapped=false;
+				
 				if(arr[j]>arr[j+1])
 				{
 					swapped=true;
@@ -21,10 +19,12 @@ public class H_17_BubbleSort {
 					arr[j]=arr[j+1];
 					arr[j+1]=temp;
 				}
-				if(swapped==false)
-					{
-						break;
-					}
+				
+				System.out.println(Arrays.toString(arr));
+			}
+			if(swapped==false)
+			{
+				break;
 			}
 			
 			
@@ -58,12 +58,13 @@ public class H_17_BubbleSort {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int[] arr = { 5, 4, 3, 2, 1 };
-		System.out.println(Arrays.toString(arr));
+//		int[] arr = { 5, 4, 3, 2, 1 };
+		int[]arr = {9,10,5};
+//		System.out.println(Arrays.toString(arr));
 
-//		bubbleSort(arr);
+		bubbleSort(arr);
 		bubbleSort_Bari(arr);
-		System.out.println(Arrays.toString(arr));
+//		System.out.println(Arrays.toString(arr));
 
 
 	}

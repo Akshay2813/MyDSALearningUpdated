@@ -31,8 +31,10 @@ public class L_01_TwoSum {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int [] nums = {2,7,11,15};
-		int target = 9;
+//		int [] nums = {2,7,11,15};
+		int[] nums = {1, 5, 7, 1};
+		
+		int target = 6;
 		
 		int[] ans = twoSum(nums,target);
 		

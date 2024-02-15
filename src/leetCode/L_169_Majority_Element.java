@@ -4,6 +4,26 @@ import java.util.HashMap;
 
 public class L_169_Majority_Element {
 	
+	public static int majorityElement_BruteForce(int[] arr)
+	{
+		int ans=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			int count=0;
+			for(int j=0;j<arr.length;j++)
+			{
+				if(arr[i]==arr[j])
+				{
+					count++;
+				}
+			}
+			if(count>arr.length/2)
+			{
+				ans =arr[i];
+			}
+		}
+		return ans;
+	}
 	public static int majorityElement(int[] nums) {
         
         HashMap<Integer,Integer> m = new HashMap();
@@ -48,7 +68,8 @@ public class L_169_Majority_Element {
 
 		int[] arr = {2,2,1,1,1,2,2};
 		
-		int majorityElement = majorityElement(arr);
+		int majorityElement = majorityElement_BruteForce(arr);
+//		int majorityElement = majorityElement(arr);
 		System.out.print(majorityElement);
 	}
 
